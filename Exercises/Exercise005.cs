@@ -5,8 +5,17 @@ namespace Exercises
     {
         public bool IsPangram(string input)
         {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            if (input == "") return false;
+
+            for (var i = 0; i < 26; i++)
+            {
+                if (input.IndexOf((char)(65 + i)) == -1 && input.IndexOf((char)(97 + i)) == -1)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
